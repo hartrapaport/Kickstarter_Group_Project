@@ -20,5 +20,14 @@ class ApplicationController < Sinatra::Base
     erb :project_sign_up
   end
   
-end
+  post '/user' do
+     @user = User.new({:username => params[:username]})
+     @user.save
+     erb :user
+  end
   
+  post '/user_sign_up' do
+    erb :user_sign_up
+  end
+  
+end
