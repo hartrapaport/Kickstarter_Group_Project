@@ -6,5 +6,10 @@
       <input type="submit" value="User Sign up">
 </form>
 <h1> Projects so far </h1>
-<%=@project.project_name%>
-<%=@project.genre%>
+<%@projects.each do |project|%> 
+<%="#{project.project_name}"%> <br>
+<%="#{project.genre}"%> <br>
+<%="#{project.goal}"%> <br>
+<%="#{project.days}"%> <br>
+<%="#{project.owner}"%> <br>
+<%end%>
