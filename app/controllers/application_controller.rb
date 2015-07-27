@@ -9,7 +9,14 @@ class ApplicationController < Sinatra::Base
   
   
   get "/" do
+    @project = Project.new({:project_name => params[:project_name], :genre => params[:genre], :rewards => params[:rewards], :goal => params[:goal], :days => params[:days], :owner => params[:owner]})
+    @project.save  
       erb :index
+  end
+  post "/to_sign_up" do 
+     @project = Project.new({:project_name => params[:project_name], :genre => params[:genre], :rewards => params[:rewards], :goal => params[:goal], :days => params[:days], :owner => params[:owner]})
+    @project.save  
+    erb :index
   end
   post '/project' do
     @project = Project.new({:project_name => params[:project_name], :genre => params[:genre], :rewards => params[:rewards], :goal => params[:goal], :days => params[:days], :owner => params[:owner]})
