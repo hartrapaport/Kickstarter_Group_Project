@@ -1,7 +1,8 @@
-.general{
-  font-family:"Helvetica"
-}
-
 h1{
   font-size: 30px
+}
+
+body{
+  background-image: url("http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_1.jpg");
+  background-repeat: no-repeat;
 }
